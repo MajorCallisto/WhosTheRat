@@ -36,6 +36,7 @@ const boolean TESTMODE = false;
 
 void setup() 
 {
+  Serial.begin(9600);
   //Set the pinmode for the pins used with the
   //shift register
   pinMode(latchPin, OUTPUT);
@@ -181,4 +182,10 @@ void updatePotValues(){
       potValues[count+8] = analogRead(A3);
     }
   }
+  
+//  for (count=0; count<=11; count++) {
+//    Serial.print ( potValues[count]);
+//    Serial.print(" ");
+//  }
+//  Serial.println("");
 }
